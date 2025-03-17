@@ -4,8 +4,8 @@ using namespace std;
 
 class Point{
     private:
-        int *x = new int;
-        int *y = new int;
+        int *x;
+        int *y;
         static int counter;
     public:
         Point() : x(new int(0)), y(new int(0)), id(new int(++counter)){
@@ -38,7 +38,7 @@ class Point{
         }
         ~Point();
     protected:
-        int *id = new int;
+        int *id;
 };
 
 Point::~Point(){
