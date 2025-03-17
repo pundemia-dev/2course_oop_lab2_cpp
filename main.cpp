@@ -50,16 +50,6 @@ Point::~Point(){
 
 int Point::counter = 0;
 
-class LineSegment{
-    private:
-        Point a;
-        Point b;
-    public:
-
-    protected:
-        int *id = new int;
-};
-
 int main(){
     // Static objects
     Point s_point_without_params;
