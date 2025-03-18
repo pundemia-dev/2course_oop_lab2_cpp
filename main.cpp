@@ -11,9 +11,9 @@ class B{
 
 class A{
     public:
-        B cb;
-        A(const int &arg):cb(arg){ printf("[log] Объект класса A создан\n"); }
-        ~A(){ printf("[log] Объект класса A разрушен\n"); }
+        B *cb;
+        A(const int &arg){ cb = new B(arg); printf("[log] Объект класса A создан\n"); }
+        ~A(){ delete cb; printf("[log] Объект класса A разрушен\n"); }
 };
 
 int main(){
